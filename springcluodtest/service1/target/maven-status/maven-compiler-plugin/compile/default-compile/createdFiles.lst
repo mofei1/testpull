@@ -1,0 +1,4 @@
+test\springcloud\base\mapper\UserMapper.class
+test\springcloud\base\controller\UserController.class
+test\springcloud\base\Service1Application.class
+test\springcloud\base\service\UserService.class

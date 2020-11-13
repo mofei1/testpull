@@ -1,0 +1,23 @@
+server:
+  port: 10012
+spring:
+  application:
+    name: service1
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/dd3?useUnicode=true&characterEncoding=UTF-8
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10001/eureka
+      ##Eureka客户端与Eureka服务端的交互地址，高可用状态配置对方的地址，单机状态配置自己（如果
+     #不配置则默认本机8761端口）
+  instance:
+    lease-renewal-interval-in-seconds: 5 # 5秒钟发送一次心跳
+    lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期
+    #配置自身信息
+    prefer-ip-address: true
+    ip-address: 127.0.0.1 #配置微服务的地址
+    instance-id: ${spring.application.name}:${server.port} #默认就是 名称加端口号 根本不用配置
