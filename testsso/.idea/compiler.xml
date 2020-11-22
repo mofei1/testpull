@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="test-auth" />
+        <module name="test-gateway" />
+        <module name="test-model" />
+        <module name="test-order" />
+        <module name="test-product" />
+        <module name="test-resgister" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="test-auth" options="-parameters" />
+      <module name="test-gateway" options="-parameters" />
+      <module name="test-model" options="-parameters" />
+      <module name="test-order" options="-parameters" />
+      <module name="test-product" options="-parameters" />
+      <module name="test-resgister" options="-parameters" />
+    </option>
+  </component>
+</project>

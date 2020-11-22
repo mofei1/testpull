@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: test-auth
+server:
+  port: 20004
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:20001/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 5 # 5秒钟发送一次心跳
+    lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期
+encrypt:
+  key-store:
+    location: classpath:/xc.keystore
+    secret: xuechengkeystore
+    alias: xckey
+    password: xuecheng

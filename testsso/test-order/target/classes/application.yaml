@@ -1,0 +1,21 @@
+server:
+  port: 20003
+  servlet:
+    session:
+      cookie:
+        name: OAUTH2-CLIENT-SESSION01
+spring:
+  application:
+    name: test-order
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/testsso?useUnicode=true&characterEncoding=UTF-8
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:20001/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 5 # 5秒钟发送一次心跳
+    lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期

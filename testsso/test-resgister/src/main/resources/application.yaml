@@ -1,0 +1,16 @@
+server:
+  port: 20001
+spring:
+  application:
+    name: test-register
+eureka:
+  client:
+    fetch-registry: false       #拉取服务 默认都是true 客户端可以不用配置 ，服务端单机时设置为false 高可用设置为true
+    register-with-eureka: false #注册到eureka
+    service-url:
+      defaultZone: http://127.0.0.1:20001/eureka
+      ##Eureka客户端与Eureka服务端的交互地址，高可用状态配置对方的地址，单机状态配置自己（如果
+     #不配置则默认本机8761端口）
+  server:
+    enable-self-preservation: false # 关闭自我保护 删除失败的服务
+    eviction-interval-timer-in-ms: 5000 # 每隔5秒钟，对失败的服务清理:
